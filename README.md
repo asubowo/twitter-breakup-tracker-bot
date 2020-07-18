@@ -15,7 +15,7 @@ This project utilizes dotenv to store environment variables at runtime.
 ## Chartjs ##
 Never used chartjs before, or by any regards .ejs files. I'm used to Ansible and Jinja templating, so this was pretty straight forward. It's actually really nice being able to just send variables across files as .ejs lets me.
 
-## Titter's API ##
+## Twitter's API ##
 Twitter's API is actually pretty straight forward to consume and fun to datamine. Honestly, go out there and request a development key of your own!
 
 ## Postgres ##
