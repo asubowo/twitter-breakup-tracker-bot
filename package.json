@@ -1,0 +1,35 @@
+{
+  "name": "twitter-breakup-bot",
+  "version": "1.0.0",
+  "description": "You're not alone",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "twitter",
+    "bot",
+    "breakups"
+  ],
+  "author": "Andrew Subowo",
+  "license": "ISC",
+  "dependencies": {
+    "async": "^3.2.0",
+    "chart.js": "^2.9.3",
+    "dotenv": "^8.2.0",
+    "ejs": "^3.0.1",
+    "express": "^4.17.1",
+    "pg": "^8.3.0",
+    "twitter": "^1.7.1",
+    "twitter-stream-api": "^0.5.2"
+  },
+  "devDependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/asubowo/twitter-breakup-tracker.git"
+  },
+  "bugs": {
+    "url": "https://github.com/asubowo/twitter-breakup-tracker/issues"
+  },
+  "homepage": "https://github.com/asubowo/twitter-breakup-tracker#readme"
+}

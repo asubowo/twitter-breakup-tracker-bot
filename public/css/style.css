@@ -1,0 +1,116 @@
+@media only screen and (min-device-width: 481px) {
+  body {
+        width: 65%;
+        margin: 0 auto;
+        font-family: 'Open Sans', sans-serif;
+      }
+      .container {
+        width: 70%;
+        margin: 0 auto;
+      }
+      fieldset {
+        display: block;
+        -webkit-margin-start: 0px;
+        -webkit-margin-end: 0px;
+        -webkit-padding-before: 0em;
+        -webkit-padding-start: 0em;
+        -webkit-padding-end: 0em;
+        -webkit-padding-after: 0em;
+        border: 0px;
+        border-image-source: initial;
+        border-image-slice: initial;
+        border-image-width: initial;
+        border-image-outset: initial;
+        border-image-repeat: initial;
+        min-width: -webkit-min-content;
+        padding: 30px;
+      }
+      p {
+        font-weight:300;
+        width: 100%;
+        font-size: 40px;
+        border:0px;
+        outline: none;
+        width: 100%;
+        color: #4b545f;
+        background: #fff;
+        font-family: Open Sans,Verdana;
+        padding: 10px 15px;
+        margin: 30px 0px;
+      }
+      .ghost-button {
+        background-color: transparent;
+        border:2px solid #ddd;
+        padding:10px 30px;
+        width: 100%;
+        min-width: 350px;
+        font-family: Open Sans,Verdana;
+        -webkit-transition: all 0.1s ease-in-out;
+        -moz-transition: all 0.1s ease-in-out;
+        -ms-transition: all 0.1s ease-in-out;
+        -o-transition: all 0.1s ease-in-out;
+        transition: all 0.1s ease-in-out;
+      }
+      .ghost-button:hover {
+        border:2px solid #515151;
+      }
+}
+
+@media only screen and (max-device-width: 480px) {
+    body {
+        width: 100%;
+        margin: 0 auto;
+        font-family: 'Open Sans', sans-serif;
+      }
+      .container {
+        width: 100%;
+        margin: 0 auto;
+      }
+      fieldset {
+        display: block;
+        -webkit-margin-start: 0px;
+        -webkit-margin-end: 0px;
+        -webkit-padding-before: 0em;
+        -webkit-padding-start: 0em;
+        -webkit-padding-end: 0em;
+        -webkit-padding-after: 0em;
+        border: 0px;
+        border-image-source: initial;
+        border-image-slice: initial;
+        border-image-width: initial;
+        border-image-outset: initial;
+        border-image-repeat: initial;
+        min-width: -webkit-min-content;
+        padding: 30px;
+      }
+      p {
+        font-weight:300;
+        width: 100%;
+        font-size: 100px;
+        border:0px;
+        outline: none;
+        width: 100%;
+        color: #4b545f;
+        background: #fff;
+        font-family: Open Sans,Verdana;
+        padding: 10px 15px;
+        margin: 30px 0px;
+      }
+      .ghost-button {
+        background-color: transparent;
+        border:2px solid #ddd;
+        padding:10px 30px;
+        width: 100%;
+        min-width: 350px;
+        font-size: 90px;
+        font-family: Open Sans,Verdana;
+        -webkit-transition: all 0.1s ease-in-out;
+        -moz-transition: all 0.1s ease-in-out;
+        -ms-transition: all 0.1s ease-in-out;
+        -o-transition: all 0.1s ease-in-out;
+        transition: all 0.1s ease-in-out;
+      }
+      .ghost-button:hover {
+        border:2px solid #515151;
+      }
+}
