@@ -17,7 +17,7 @@ const pool = new Pool({
         host: '/var/run/postgresql',
         database: 'breakup',
         port: 5432,
-})
+});
 
 var async = require('async');
 var date_ob = new Date();
@@ -34,7 +34,7 @@ let allDays = "(SELECT MIN(date) FROM breakups)";
  **/
 var filter = '#breakup, broke up, no longer together, #brokeup, #ex, exbf, exgf, #begonethot, #dumped, broken up';
 
-var Twitter = require('twitter-stream-api')
+var Twitter = require('twitter-stream-api');
 const keys = {
     consumer_key: process.env.CONSUMER_KEY,
     consumer_secret: process.env.CONSUMER_SECRET,
@@ -93,6 +93,38 @@ app.get('/', function (req, res) {
         res.render('index', {breakups, date, breakupData, dateRange, lastRecordedDate});    
     })
 });
+
+/**
+ * For API calls, return the total amount of breakups and the earliest date available from postgres query
+ */
+app.get('/breakups', function(req, res) {
+    let breakupData = [];
+    let dateRange = [];
+    let breakups = 0;
+    async.series({
+        new: function (cb) {
+            var myDate = new Date();
+            var currDate = formatDate(myDate);
+            var sql = `SELECT COUNT(*) total,date_trunc('day', date) FROM breakups b WHERE b.date >= (SELECT MIN(date) FROM breakups) AND b.date <= date_trunc('day', TO_TIMESTAMP('${currDate}', 'YYY-MM-DD HH24:MI:SS') + INTERVAL '1 day') GROUP BY date_trunc('day', date) ORDER BY date_trunc`;
+            pool.query(sql, (error, result) => {
+                if (error) {
+                    console.log(error);
+                }
+
+                for (let row of result.rows) {
+                    breakupData.push(row.total);
+                    dateRange.push(row.date_trunc);
+                    breakups = breakups + parseInt(row.total);
+                }
+                cb(error, result);
+            });
+
+        }
+    }, function (error, result) {
+        var lastRecordedDate = dateRange[0];
+        res.status(200).json({ breakups, lastRecordedDate });
+    })
+})
 
 app.listen(3000, function() {
     console.log('Server is now RUNNING');
