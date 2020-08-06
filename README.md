@@ -20,3 +20,9 @@ Twitter's API is actually pretty straight forward to consume and fun to datamine
 
 ## Postgres ##
 I'm definitely not going to explain how to install Postgres in this small README. I will say, that all I did was initialize a new TABLE that has one column of type: TIMESTAMP. All this bot really is doing is that for every detected tweet that matches the filter, just log the timestamp into Postgres. From there we just do some fancy sorting.
+
+# API #
+If you're running this locally, there is an API set on `/breakups` where you can poll JSON data for parsing. Right now, it's being consumed by my Discord bot I'm writing to also further my Node experience.
+
+# Modification and use #
+If you wanna take this code and track other keywords, be my guest. All I ask is a shout out if you do use this as a template.
