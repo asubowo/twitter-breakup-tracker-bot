@@ -3,6 +3,8 @@ This was a project I've been working on in my spare time when I had a drink one 
 
 Most of my prior experience was deploying Node apps into a Heroku instance, but I wanted to challenge myself and build out more or less a full stack in my personal development lab at home. I suppose this is my big ol' brainchild of it.
 
+See the tracker [here](http://labs.andrewsubowo.com/exidents)
+
 # Example dataset #
 If done properly, you should see a dataset like the following image below. Take note that on 7/15 and 7/16, Twitter API was severely rate limited due to a major security breach over at Twitter HQ
 
@@ -20,3 +22,9 @@ Twitter's API is actually pretty straight forward to consume and fun to datamine
 
 ## Postgres ##
 I'm definitely not going to explain how to install Postgres in this small README. I will say, that all I did was initialize a new TABLE that has one column of type: TIMESTAMP. All this bot really is doing is that for every detected tweet that matches the filter, just log the timestamp into Postgres. From there we just do some fancy sorting.
+
+# API #
+If you're running this locally, there is an API set on `/breakups` where you can poll JSON data for parsing. Right now, it's being consumed by my Discord bot I'm writing to also further my Node experience.
+
+# Modification and use #
+If you wanna take this code and track other keywords, be my guest. All I ask is a shout out if you do use this as a template.
