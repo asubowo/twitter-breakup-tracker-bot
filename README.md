@@ -3,6 +3,8 @@ This was a project I've been working on in my spare time when I had a drink one 
 
 Most of my prior experience was deploying Node apps into a Heroku instance, but I wanted to challenge myself and build out more or less a full stack in my personal development lab at home. I suppose this is my big ol' brainchild of it.
 
+See the tracker [here](http://labs.andrewsubowo.com/exidents)
+
 # Example dataset #
 If done properly, you should see a dataset like the following image below. Take note that on 7/15 and 7/16, Twitter API was severely rate limited due to a major security breach over at Twitter HQ
 
