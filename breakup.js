@@ -9,6 +9,7 @@
  * @version 1.0
  */
 require('dotenv').config();
+const path = require('path');
 const express = require('express');
 const app = express();
 const Pool = require('pg').Pool
@@ -63,8 +64,7 @@ function formatDate(date) {
 }
 
 app.set('view engine', 'ejs');
-app.use(express.static('public'));
-
+app.use('/exidentstatic', express.static('public'));
 app.get('/', function (req, res) {
     let breakupData = [];
     let dateRange = [];
