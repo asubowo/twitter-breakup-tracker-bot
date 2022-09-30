@@ -15,9 +15,10 @@ const app = express();
 const Pool = require('pg').Pool
 const pool = new Pool({
         user: process.env.POSTGRES_USER,
-        host: '/var/run/postgresql',
-        database: 'breakup',
-        port: 5432,
+        host: 'breakup-db',
+        database: 'breakups',
+        port: process.env.POSTGRES_PORT,
+        password: process.env.POSTGRES_PASSWORD
 });
 
 var async = require('async');

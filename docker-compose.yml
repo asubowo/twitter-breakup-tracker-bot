@@ -1,0 +1,29 @@
+version: '3'
+
+volumes:
+  breakup_data:
+      driver: local
+
+services:
+  breakup-db:
+      image: postgres
+      container_name: breakup-db
+      volumes:
+        - breakup_data:/var/lib/postgresql/data
+      env_file: .env
+      expose:
+        - "5455"
+      ports:
+        - "5455:5455"
+      command: -p 5455
+
+  breakup:
+    build:
+      context: .
+    image: asubowo/breakup-tracker
+    container_name: breakup
+    env_file: .env
+    depends_on:
+      - breakup-db
+    ports:
+      - "3000:3000"
